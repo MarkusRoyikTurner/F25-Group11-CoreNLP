@@ -1,0 +1,34 @@
+=== Stanford CoreNLP Analysis Output ===
+
+Sentence: Kosgi Santosh sent an email to Stanford University.
+Sentiment: Neutral
+Parse Tree: (ROOT (S (NP (NNP Kosgi) (NNP Santosh)) (VP (VBD sent) (NP (DT an) (NN email)) (PP (IN to) (NP (NNP Stanford) (NNP University)))) (. .)))
+Dependencies: -> sent/VBD (root)
+  -> Santosh/NNP (nsubj)
+    -> Kosgi/NNP (compound)
+  -> email/NN (obj)
+    -> an/DT (det)
+  -> University/NNP (obl:to)
+    -> to/IN (case)
+    -> Stanford/NNP (compound)
+  -> ./. (punct)
+
+Entities: [Kosgi Santosh, Stanford University]
+
+Sentence: He didn’t get a reply.
+Sentiment: Neutral
+Parse Tree: (ROOT (S (NP (PRP He)) (VP (VBD did) (RB n’t) (VP (VB get) (NP (DT a) (NN reply)))) (. .)))
+Dependencies: -> get/VB (root)
+  -> He/PRP (nsubj)
+  -> did/VBD (aux)
+  -> n’t/RB (advmod)
+  -> reply/NN (obj)
+    -> a/DT (det)
+  -> ./. (punct)
+
+Entities: [He]
+
+=== Coreference Chains ===
+No coreference chains found.
+
+=== End of Analysis ===
