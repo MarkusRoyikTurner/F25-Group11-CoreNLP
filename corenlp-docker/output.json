@@ -1,0 +1,284 @@
+{
+  "sentences": [
+    {
+      "index": 0,
+      "parse": "(ROOT\n  (S\n    (NP (NNP Barack) (NNP Obama))\n    (VP (VBD was)\n      (VP (VBN born)\n        (PP (IN in)\n          (NP (NNP Hawaii)))))\n    (. .)))",
+      "basicDependencies": [
+        {
+          "dep": "ROOT",
+          "governor": 0,
+          "governorGloss": "ROOT",
+          "dependent": 4,
+          "dependentGloss": "born"
+        },
+        {
+          "dep": "compound",
+          "governor": 2,
+          "governorGloss": "Obama",
+          "dependent": 1,
+          "dependentGloss": "Barack"
+        },
+        {
+          "dep": "nsubj:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 2,
+          "dependentGloss": "Obama"
+        },
+        {
+          "dep": "aux:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 3,
+          "dependentGloss": "was"
+        },
+        {
+          "dep": "case",
+          "governor": 6,
+          "governorGloss": "Hawaii",
+          "dependent": 5,
+          "dependentGloss": "in"
+        },
+        {
+          "dep": "obl",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 6,
+          "dependentGloss": "Hawaii"
+        },
+        {
+          "dep": "punct",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 7,
+          "dependentGloss": "."
+        }
+      ],
+      "enhancedDependencies": [
+        {
+          "dep": "ROOT",
+          "governor": 0,
+          "governorGloss": "ROOT",
+          "dependent": 4,
+          "dependentGloss": "born"
+        },
+        {
+          "dep": "compound",
+          "governor": 2,
+          "governorGloss": "Obama",
+          "dependent": 1,
+          "dependentGloss": "Barack"
+        },
+        {
+          "dep": "nsubj:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 2,
+          "dependentGloss": "Obama"
+        },
+        {
+          "dep": "aux:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 3,
+          "dependentGloss": "was"
+        },
+        {
+          "dep": "case",
+          "governor": 6,
+          "governorGloss": "Hawaii",
+          "dependent": 5,
+          "dependentGloss": "in"
+        },
+        {
+          "dep": "obl:in",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 6,
+          "dependentGloss": "Hawaii"
+        },
+        {
+          "dep": "punct",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 7,
+          "dependentGloss": "."
+        }
+      ],
+      "enhancedPlusPlusDependencies": [
+        {
+          "dep": "ROOT",
+          "governor": 0,
+          "governorGloss": "ROOT",
+          "dependent": 4,
+          "dependentGloss": "born"
+        },
+        {
+          "dep": "compound",
+          "governor": 2,
+          "governorGloss": "Obama",
+          "dependent": 1,
+          "dependentGloss": "Barack"
+        },
+        {
+          "dep": "nsubj:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 2,
+          "dependentGloss": "Obama"
+        },
+        {
+          "dep": "aux:pass",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 3,
+          "dependentGloss": "was"
+        },
+        {
+          "dep": "case",
+          "governor": 6,
+          "governorGloss": "Hawaii",
+          "dependent": 5,
+          "dependentGloss": "in"
+        },
+        {
+          "dep": "obl:in",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 6,
+          "dependentGloss": "Hawaii"
+        },
+        {
+          "dep": "punct",
+          "governor": 4,
+          "governorGloss": "born",
+          "dependent": 7,
+          "dependentGloss": "."
+        }
+      ],
+      "entitymentions": [
+        {
+          "docTokenBegin": 0,
+          "docTokenEnd": 2,
+          "tokenBegin": 0,
+          "tokenEnd": 2,
+          "text": "Barack Obama",
+          "characterOffsetBegin": 0,
+          "characterOffsetEnd": 12,
+          "ner": "PERSON",
+          "nerConfidences": {
+            "PERSON": 0.9985745953945
+          }
+        },
+        {
+          "docTokenBegin": 5,
+          "docTokenEnd": 6,
+          "tokenBegin": 5,
+          "tokenEnd": 6,
+          "text": "Hawaii",
+          "characterOffsetBegin": 25,
+          "characterOffsetEnd": 31,
+          "ner": "STATE_OR_PROVINCE",
+          "nerConfidences": {
+            "LOCATION": 0.99953312937152
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "index": 1,
+          "word": "Barack",
+          "originalText": "Barack",
+          "lemma": "Barack",
+          "characterOffsetBegin": 0,
+          "characterOffsetEnd": 6,
+          "pos": "NNP",
+          "ner": "PERSON",
+          "speaker": "PER0",
+          "before": "",
+          "after": " "
+        },
+        {
+          "index": 2,
+          "word": "Obama",
+          "originalText": "Obama",
+          "lemma": "Obama",
+          "characterOffsetBegin": 7,
+          "characterOffsetEnd": 12,
+          "pos": "NNP",
+          "ner": "PERSON",
+          "speaker": "PER0",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 3,
+          "word": "was",
+          "originalText": "was",
+          "lemma": "be",
+          "characterOffsetBegin": 13,
+          "characterOffsetEnd": 16,
+          "pos": "VBD",
+          "ner": "O",
+          "speaker": "PER0",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 4,
+          "word": "born",
+          "originalText": "born",
+          "lemma": "bear",
+          "characterOffsetBegin": 17,
+          "characterOffsetEnd": 21,
+          "pos": "VBN",
+          "ner": "O",
+          "speaker": "PER0",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 5,
+          "word": "in",
+          "originalText": "in",
+          "lemma": "in",
+          "characterOffsetBegin": 22,
+          "characterOffsetEnd": 24,
+          "pos": "IN",
+          "ner": "O",
+          "speaker": "PER0",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 6,
+          "word": "Hawaii",
+          "originalText": "Hawaii",
+          "lemma": "Hawaii",
+          "characterOffsetBegin": 25,
+          "characterOffsetEnd": 31,
+          "pos": "NNP",
+          "ner": "STATE_OR_PROVINCE",
+          "speaker": "PER0",
+          "before": " ",
+          "after": ""
+        },
+        {
+          "index": 7,
+          "word": ".",
+          "originalText": ".",
+          "lemma": ".",
+          "characterOffsetBegin": 31,
+          "characterOffsetEnd": 32,
+          "pos": ".",
+          "ner": "O",
+          "speaker": "PER0",
+          "before": "",
+          "after": ""
+        }
+      ]
+    }
+  ],
+  "corefs": {
+  }
+}
