@@ -48,7 +48,7 @@ University of Guelph – Fall 2025
 
 ---
 
-###  How to Run Locally (Java)
+### How to Run Locally (Java)
 
 #### 1. Prerequisites
 - Install **Java JDK 17** or later.  
@@ -58,3 +58,113 @@ University of Guelph – Fall 2025
 #### 2. Compile the Java Program
 ```bash
 javac -cp "stanford-corenlp-4.5.10/*" CoreNLPDemo.java
+```
+
+#### 3. Run the Program
+```bash
+java -cp ".:stanford-corenlp-4.5.10/*" CoreNLPDemo
+```
+
+#### 4. Expected Output
+- A folder named `/results/` will be created automatically.  
+- A timestamped `.txt` file will appear inside `results/`, containing:
+  - Sentence segmentation  
+  - POS tags and dependency trees  
+  - Named entities  
+  - Sentiment results  
+
+Example console output:
+```bash
+[INFO] Created output directory: /results
+[SUCCESS] Results written to: results/analysis_output_20251016_221530.txt
+```
+
+---
+
+### Testing via cURL API (Quote Annotator)
+
+Run the following command to validate **Issue #1394** (Quote Annotator functionality):
+
+```bash
+curl -X POST \
+  -F "input=John said, 'I am learning CoreNLP.'" \
+  "http://localhost:9000/?properties=%7B%22annotators%22%3A%22tokenize,ssplit,pos,lemma,ner,parse,depparse,coref,quote%22%2C%22coref.algorithm%22%3A%22neural%22%2C%22outputFormat%22%3A%22json%22%7D" \
+  > output.json
+```
+
+Expected output snippet:
+```json
+"quotes": [
+  {
+    "quoteText": "I am learning CoreNLP.",
+    "speaker": "John"
+  }
+]
+```
+
+---
+
+### Run in Docker (Containerized Environment)
+
+#### 1. Build Docker Image
+```bash
+docker build -t corenlp:4.5.10 .
+```
+
+#### 2. Run the Container
+```bash
+docker run -p 9000:9000 --name corenlp-server corenlp:4.5.10
+```
+
+#### 3. Verify Server Access
+Visit [http://localhost:9000](http://localhost:9000) in your web browser to confirm the CoreNLP web interface is running.
+
+---
+
+### Verification Steps for TA
+
+| Step | Action | Expected Result |
+|------|---------|-----------------|
+| 1 | Clone the repository | Folder `F25-Group11-CoreNLP` appears locally |
+| 2 | Open and compile `CoreNLPDemo.java` | No compilation errors |
+| 3 | Run program | Output file generated in `/results` |
+| 4 | Inspect output file | Contains sentences, POS, NER, and sentiment |
+| 5 | Run Docker container | CoreNLP server starts at port 9000 |
+| 6 | Execute cURL test | JSON file confirms quote + speaker data |
+| 7 | Review README.md | Contains complete setup and testing guide |
+
+---
+
+### Repository and Cloning Information
+
+Official Group 11 Repository:  
+[https://github.com/MarkusRoyikTurner/F25-Group11-CoreNLP](https://github.com/MarkusRoyikTurner/F25-Group11-CoreNLP)
+
+To clone:
+```bash
+git clone https://github.com/MarkusRoyikTurner/F25-Group11-CoreNLP.git
+cd F25-Group11-CoreNLP
+```
+
+> **Note:** This is the official submission repository for **ENGG*4450 Phase 2**.  
+> The TA can directly execute tests following the steps above for grading.
+
+---
+
+### Development Process Summary
+- **Scrum Framework:** Managed through Jira with Sprint 1 (Oct 18–24) containing 12 tasks related to annotation and Docker issues.  
+- **Daily Stand-ups:** Conducted asynchronously via Teams.  
+- **Collaboration:** GitHub commits, Docker builds, and JSON tests reviewed weekly.  
+- **Communication:** Microsoft Teams used for quick troubleshooting and feedback sharing.  
+
+---
+
+### Summary
+This repository contains the **fully tested implementation** for the **ENGG*4450 Phase 2 – Stanford CoreNLP Enhancement Project**, including:
+- Implementation of **Issue #1394 (Quote Annotator fix)**  
+- Implementation of **Issue #1459 (Dockerfile integration)**  
+- Test results (`.txt` and `.json`) confirming correct functionality  
+- A reproducible Java and Docker setup for verification  
+
+---
+"""
