@@ -34,8 +34,7 @@ University of Guelph – Fall 2025
 
 ---
 
-### Repository Contents
-
+### 📂 Repository Contents
 | File | Description |
 |------|--------------|
 | `CoreNLPDemo.java` | Custom demo class that initializes the CoreNLP pipeline, annotates text, and writes results to a timestamped output file. |
@@ -49,8 +48,13 @@ University of Guelph – Fall 2025
 
 ---
 
-### How to Run Locally (Java)
+###  How to Run Locally (Java)
 
-#### Compile the Java Program
+#### 1. Prerequisites
+- Install **Java JDK 17** or later.  
+- Download or verify that the **stanford-corenlp-4.5.10** library folder exists in the same directory as this repository.  
+- Ensure that your terminal’s working directory is the root of the cloned project.
+
+#### 2. Compile the Java Program
 ```bash
 javac -cp "stanford-corenlp-4.5.10/*" CoreNLPDemo.java
