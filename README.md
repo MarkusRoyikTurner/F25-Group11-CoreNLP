@@ -168,6 +168,18 @@ This repository contains the **fully tested implementation** for the **ENGG*4450
 
 ---
 
-## Phase 3 – Feature Enhancement
-Implements design plan for GitHub Issue #878: Truecaser probability output.
-Includes UML diagrams, testing plan, and demonstration stub.
+## Phase 3 – Feature Enhancement: Truecase Probabilities (Issue #878)
+
+This phase introduces a new feature design for the TruecaseAnnotator.
+
+**Feature Summary**
+- Adds configuration flag: `truecase.outputProbabilities`
+- Displays probability distribution for each Truecase class (LOWER, UPPER, TITLE, INITCAP)
+- Increases interpretability and model transparency
+
+**Files Added**
+- `TruecaseProbabilityExtension.java` – Demonstration stub showing probability output.
+
+**Status**
+- Design and testing plan documented in Phase 3 report.
+- Ready for potential integration into the CoreNLP pipeline.
