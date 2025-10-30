@@ -167,3 +167,7 @@ This repository contains the **fully tested implementation** for the **ENGG*4450
 - A reproducible Java and Docker setup for verification  
 
 ---
+
+## Phase 3 – Feature Enhancement
+Implements design plan for GitHub Issue #878: Truecaser probability output.
+Includes UML diagrams, testing plan, and demonstration stub.
