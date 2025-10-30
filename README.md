@@ -170,16 +170,29 @@ This repository contains the **fully tested implementation** for the **ENGG*4450
 
 ## Phase 3 – Feature Enhancement: Truecase Probabilities (Issue #878)
 
-This phase introduces a new feature design for the TruecaseAnnotator.
+This phase introduces a new feature design for the **TruecaseAnnotator** within the Stanford CoreNLP framework.  
+The enhancement implements **GitHub Issue #878 – “Show Probabilities for Truecasing Classes”**, adding functionality that allows users to view the probability distribution for each Truecase classification rather than only the top prediction.  
+This feature improves model interpretability, debugging, and transparency for downstream NLP applications.
 
-**Feature Summary**
-- Adds configuration flag: `truecase.outputProbabilities`
-- Displays probability distribution for each Truecase class (LOWER, UPPER, TITLE, INITCAP)
-- Increases interpretability and model transparency
+---
 
-**Files Added**
-- `TruecaseProbabilityExtension.java` – Demonstration stub showing probability output.
+### Feature Summary
+- Adds configuration flag: `truecase.outputProbabilities` (default = `false`)
+- Displays probability distribution for each Truecase class (`LOWER`, `UPPER`, `TITLE`, `INITCAP`)
+- Enhances interpretability and model transparency
+- Maintains full backward compatibility with existing CoreNLP pipelines
 
-**Status**
-- Design and testing plan documented in Phase 3 report.
-- Ready for potential integration into the CoreNLP pipeline.
+---
+
+### Files Added / Modified
+- **`TruecaseProbabilityExtension.java`** – New demonstration stub implementing computation and normalization of Truecase class probabilities for each token.
+- **`JSONSerializer.java`** – Modified to include a new `"truecaseProbs"` object in the JSON output when the configuration flag is enabled.
+
+---
+
+### Status
+- Feature design and testing plan documented in the Phase 3 report  
+- Code updates committed to the project repository  
+- Ready for future integration into the CoreNLP pipeline and verification through full end-to-end testing
+
+---
