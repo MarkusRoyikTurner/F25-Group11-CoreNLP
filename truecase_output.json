@@ -1,0 +1,87 @@
+{
+  "sentences": [
+    {
+      "index": 0,
+      "tokens": [
+        {
+          "index": 1,
+          "word": "Apple",
+          "originalText": "Apple",
+          "lemma": "Apple",
+          "characterOffsetBegin": 0,
+          "characterOffsetEnd": 5,
+          "pos": "NNP",
+          "truecase": "INIT_UPPER",
+          "truecaseText": "Apple",
+          "before": "",
+          "after": " "
+        },
+        {
+          "index": 2,
+          "word": "launches",
+          "originalText": "launches",
+          "lemma": "launch",
+          "characterOffsetBegin": 6,
+          "characterOffsetEnd": 14,
+          "pos": "VBZ",
+          "truecase": "LOWER",
+          "truecaseText": "launches",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 3,
+          "word": "new",
+          "originalText": "new",
+          "lemma": "new",
+          "characterOffsetBegin": 15,
+          "characterOffsetEnd": 18,
+          "pos": "JJ",
+          "truecase": "LOWER",
+          "truecaseText": "new",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 4,
+          "word": "iPhone",
+          "originalText": "iPhone",
+          "lemma": "iPhone",
+          "characterOffsetBegin": 19,
+          "characterOffsetEnd": 25,
+          "pos": "NNP",
+          "truecase": "O",
+          "truecaseText": "iPhone",
+          "before": " ",
+          "after": " "
+        },
+        {
+          "index": 5,
+          "word": "today",
+          "originalText": "today",
+          "lemma": "today",
+          "characterOffsetBegin": 26,
+          "characterOffsetEnd": 31,
+          "pos": "NN",
+          "truecase": "LOWER",
+          "truecaseText": "today",
+          "before": " ",
+          "after": ""
+        },
+        {
+          "index": 6,
+          "word": ".",
+          "originalText": ".",
+          "lemma": ".",
+          "characterOffsetBegin": 31,
+          "characterOffsetEnd": 32,
+          "pos": ".",
+          "truecase": "O",
+          "truecaseText": ".",
+          "before": "",
+          "after": ""
+        }
+      ]
+    }
+  ]
+}
