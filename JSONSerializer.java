@@ -7,9 +7,13 @@
  * in the output JSON for each token.
  */
 
+package edu.stanford.nlp.pipeline;
+
+import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import org.json.JSONObject;
 import java.util.Map;
+import java.util.Properties;
 
 public class JSONSerializer {
 
@@ -32,10 +36,11 @@ public class JSONSerializer {
     public JSONObject serializeToken(CoreLabel token) {
         JSONObject json = new JSONObject();
 
-        // Basic token fields (existing behavior)
+        // Existing token fields
         json.put("word", token.word());
         json.put("truecase", token.get(CoreAnnotations.TrueCaseAnnotation.class));
-        json.put("truecaseConfidence", token.get(CoreAnnotations.TrueCaseConfidenceAnnotation.class));
+        json.put("truecaseConfidence",
+                 token.get(CoreAnnotations.TrueCaseConfidenceAnnotation.class));
 
         // --- New Feature Implementation ---
         if (outputTruecaseProbs) {
