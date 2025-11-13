@@ -34,7 +34,7 @@ University of Guelph – Fall 2025
 
 ---
 
-### 📂 Repository Contents
+### Repository Contents
 | File | Description |
 |------|--------------|
 | `CoreNLPDemo.java` | Custom demo class that initializes the CoreNLP pipeline, annotates text, and writes results to a timestamped output file. |
@@ -223,7 +223,7 @@ public class TruecaseProbabilityExtension {
         System.out.println(probs);
     }
 }
-****
+---
 # Phase 4 – Build, Test, and Validation of Modified CoreNLP
 
 Phase 4 required compiling the modified Stanford CoreNLP codebase, running the enhanced server, and validating the new Phase 3 functionality (Truecase Probability Output) through live API requests.
@@ -241,22 +241,22 @@ Phase 4 required compiling the modified Stanford CoreNLP codebase, running the e
 
 ## Figures (Used in the Report)
 
-### **Figure # — Successful Launch of Modified CoreNLP Server**
+### **Figure 1 — Successful Launch of Modified CoreNLP Server**
 Screenshot shows:
 - Server starting from `target/classes`
 - Correct classpath usage with extracted JARs
 - Confirmation line:  
   **"StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000"**
 
-### **Figure # — cURL Response Showing Truecasing JSON Output**
+### **Figure 2 — cURL Response Showing Truecasing JSON Output**
 Screenshot shows:
-- cURL POST request to localhost:9000  
-- Returned JSON containing:  
-  - `word`  
-  - `originalText`  
-  - `truecase`  
-  - `truecaseText`  
-  - character offsets  
+- cURL POST request to `localhost:9000`
+- Returned JSON containing:
+  - `word`
+  - `originalText`
+  - `truecase`
+  - `truecaseText`
+  - character offsets
 
 (If TA enables `truecase.outputProbabilities=true`, JSON will also include `"truecaseProbs"`.)
 
@@ -265,11 +265,12 @@ Screenshot shows:
 ## How the TA Can Reproduce Phase 4
 
 ### **1. Start the Modified CoreNLP Server**
+
 ```bash
 java -mx4g -cp "target/classes:stanford-corenlp-4.5.10/*" \
 edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
 
-#### 2. Run the Phase 4 cURL Validation Test
+### 2. Run the Phase 4 cURL Validation Test
 
 ```bash
 curl -s -X POST \
