@@ -231,7 +231,7 @@ Phase 4 required compiling the modified Stanford CoreNLP codebase, running the e
 
 ---
 
-## ✔ Completed Deliverables
+## Completed Deliverables
 - Full Maven build succeeds with **0 errors**
 - All **1,479 JUnit tests** pass
 - Modified classes compile correctly into `target/classes`
