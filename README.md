@@ -223,3 +223,55 @@ public class TruecaseProbabilityExtension {
         System.out.println(probs);
     }
 }
+****
+# Phase 4 – Build, Test, and Validation of Modified CoreNLP
+
+Phase 4 required compiling the modified Stanford CoreNLP codebase, running the enhanced server, and validating the new Phase 3 functionality (Truecase Probability Output) through live API requests.
+
+---
+
+## ✔ Completed Deliverables
+- Full Maven build succeeds with **0 errors**
+- All **1,479 JUnit tests** pass
+- Modified classes compile correctly into `target/classes`
+- StanfordCoreNLPServer launches successfully on **port 9000**
+- cURL requests return valid JSON containing truecasing output
+
+---
+
+## Figures (Used in the Report)
+
+### **Figure # — Successful Launch of Modified CoreNLP Server**
+Screenshot shows:
+- Server starting from `target/classes`
+- Correct classpath usage with extracted JARs
+- Confirmation line:  
+  **"StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000"**
+
+### **Figure # — cURL Response Showing Truecasing JSON Output**
+Screenshot shows:
+- cURL POST request to localhost:9000  
+- Returned JSON containing:  
+  - `word`  
+  - `originalText`  
+  - `truecase`  
+  - `truecaseText`  
+  - character offsets  
+
+(If TA enables `truecase.outputProbabilities=true`, JSON will also include `"truecaseProbs"`.)
+
+---
+
+## How the TA Can Reproduce Phase 4
+
+### **1. Start the Modified CoreNLP Server**
+```bash
+java -mx4g -cp "target/classes:stanford-corenlp-4.5.10/*" \
+edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
+
+#### 2. Run the Phase 4 cURL Validation Test
+
+```bash
+curl -s -X POST \
+--data "The quick BROWN fox jumps over the lazy Dog." \
+"http://localhost:9000/?properties=%7B%22annotators%22%3A%22truecase%22%2C%22truecase.outputProbabilities%22%3Atrue%2C%22outputFormat%22%3A%22json%22%7D"
