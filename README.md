@@ -223,6 +223,7 @@ public class TruecaseProbabilityExtension {
         System.out.println(probs);
     }
 }
+
 ---
 # Phase 4 – Build, Test, and Validation of Modified CoreNLP
 
