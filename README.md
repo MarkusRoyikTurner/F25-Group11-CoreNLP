@@ -270,10 +270,11 @@ Screenshot shows:
 ```bash
 java -mx4g -cp "target/classes:stanford-corenlp-4.5.10/*" \
 edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000
-
+```
 ### 2. Run the Phase 4 cURL Validation Test
 
 ```bash
 curl -s -X POST \
 --data "The quick BROWN fox jumps over the lazy Dog." \
 "http://localhost:9000/?properties=%7B%22annotators%22%3A%22truecase%22%2C%22truecase.outputProbabilities%22%3Atrue%2C%22outputFormat%22%3A%22json%22%7D"
+```
